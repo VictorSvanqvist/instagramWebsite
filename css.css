@@ -4,6 +4,8 @@
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 -moz-box-sizing: border-box;    /* Firefox, other Gecko */
 box-sizing: border-box;         /* Opera/IE 8+ */
+
+
 }
 
 
@@ -50,12 +52,12 @@ body{
 }
 
 
-
 #header{
 	float:left;
 	background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 	width: 100%;
-	height: 140px;
+	height: 15vh;
+	min-height: 140px;
 }
 
 #header h1 {
@@ -70,21 +72,19 @@ body{
 #content{
 	float:left;
 	width: 100%;
-	height: 860px;
-  background: #F8F8FF;
+	height: 700px;
+  	background: #F8F8FF;
+	min-height: 100%;
+	height: 85vh;
+	min-height: 600px;
 }
-#footer{
-	float:left;
-	background-color: #692323;
-	width:100%;
-	height: 80px;
-}
+
 .login-box{
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
-  height: 1040px;
+  height: 700px;
   background-image: linear-gradient(45deg,#ffdf9e , #ffc273, #e56969, #c1558b, #8a49a1);
   transition: 1s;
   z-index: 999999999999;
@@ -106,7 +106,7 @@ body{
   top: 0;
   left: -100%;
   width: 100%;
-  height: 1040px;
+  height: 700px;
   background-image: linear-gradient(45deg,#ffdf9e , #ffc273, #e56969, #c1558b, #8a49a1);
   transition: 1s;
   z-index: 999999999999;
@@ -248,10 +248,12 @@ body{
   top: -30%;
   font-size: calc(1em + 1vw);
 }
-#instagramFrame{
+.instagramFrame{
   margin: 10px;
-  width: 100%;
   height: 150px;
+  position: absolute;
+  top:240px;
+  left:calc(50% - 200px);
 }
 #pic{
   overflow: hidden;
@@ -268,11 +270,14 @@ body{
   height:120px;
   float:left;
 }
-#search{
-  margin:10px;
+.search{
+	position: absolute;
+	margin:10px;
+	left: calc(50% - 125px);
 }
 #greeting{
-  margin: 10px
+  margin: 10px;
+  text-align: center;
 }
 .infoBorder{
   padding: 10px;

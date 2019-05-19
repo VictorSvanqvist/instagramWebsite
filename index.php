@@ -17,6 +17,8 @@
   function hidebuttons(){
     $('.show-login-btn').css("display", "none");
     $('.show-signup-btn').css("display", "none");
+    $('.instagramFrame').css("display", "block");
+    $('.search').css("display", "block");
     $('.show-logout-btn').css("display", "-webkit-box");
   }
 
@@ -24,6 +26,8 @@
     $('.show-login-btn').css("display", "-webkit-box");
     $('.show-signup-btn').css("display", "-webkit-box");
     $('.show-logout-btn').css("display", "none");
+    $('.instagramFrame').css("display", "none");
+    $('.search').css("display", "none");
   }
 
 </script>
@@ -49,7 +53,7 @@
         'hidebuttons();',
         '</script>';
       } else {
-        $loginPage = "Not logged in";
+        $loginPage = "You need to log in or register in order to use this site";
         echo '<script>',
         'showbuttons();',
         '</script>';
@@ -70,12 +74,12 @@
 
 
     <H1 id="greeting"><?php echo $loginPage; ?></H1>
-    <div id="search">
+    <div class="search">
       <input id="usernameInput" type="text"></input>
       <button onclick="loadDoc()">Load info</button>
     </div>
     
-    <div id="instagramFrame">
+    <div class="instagramFrame">
       <div id="pic">
         <img id="profilePic" src="">
       </div>
@@ -114,14 +118,6 @@
     		</form>
     	</div>
 	</div>
-
-
-
-
-<div id="footer">
-  <h1>This is a footer</h1>
-</div>
-
 
 
 <script type="text/javascript">
@@ -175,7 +171,54 @@ function loadDoc() {
   $(".hide-signup-btn").on("click",function(){
     $(".signup-box").toggleClass("showed");
   });
+
 </script>
+
+
+
+
+  <?php
+      $loginPage;
+      if ( isset( $_SESSION['login_user'] ) ) {
+        // Grab user data from the database using the user_id
+        // Let them access the "logged in only" pages
+        $name = $_SESSION['login_user'];
+        $loginPage = "Welcome $name";
+        echo '<script>',
+        'hidebuttons();',
+        '</script>';
+      } else {
+        $loginPage = "You need to log in or register in order to use this site";
+        echo '<script>',
+        'showbuttons();',
+        '</script>';
+      }
+      if ( isset( $_SESSION['user_exists'] ) ) {
+        echo '<script>',
+        'alert("User already exists")',
+        '</script>';
+        session_destroy();
+      }
+      if ( isset( $_SESSION['incorrect'] ) ) {
+        echo '<script>',
+        'alert("incorrect username or password")',
+        '</script>';
+        session_destroy();
+      }
+  ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
