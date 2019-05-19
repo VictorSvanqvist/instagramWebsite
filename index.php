@@ -98,7 +98,7 @@
 	<div class="login-box">
     	<div class="hide-login-btn"><i id="cross" class="fas fa-times-circle"></i></div>
     		<form class="login-form" method="post" action="login.php" autocomplete="off">
-   		 		<h1>Welcome</h1>
+   		 		<h1>Sign in</h1>
     			<input class="txtb" type="text" name="username" placeholder="Username">
     			<input class="txtb" type="password" name="password" placeholder="Password">
     			<input class="login-btn" type="submit" name="login" value="login">
@@ -109,7 +109,7 @@
 	<div class="signup-box">
     	<div class="hide-signup-btn"><i id="cross" class="fas fa-times-circle"></i></div>
     		<form class="signup-form" method="post" action="signup.php" autocomplete="off">
-   		 		<h1>Welcome</h1>
+   		 		<h1>Sign Up</h1>
     			<input class="txtb" type="text" name="username" placeholder="Username">
     			<input class="txtb" type="password" name="password" placeholder="Password">
     			<input class="sign-up-btn" type="submit" name="signup" value="signup">
