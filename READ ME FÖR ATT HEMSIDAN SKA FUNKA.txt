@@ -1,0 +1,5 @@
+https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc
+https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf
+
+
+AKTIVERA BÅDA PLUGINSEN I CHROME FÖR ATT SIDAN SKA FUNGERA FULLT
