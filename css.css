@@ -253,7 +253,8 @@ body{
   height: 150px;
   position: absolute;
   top:240px;
-  left:calc(50% - 200px);
+  left:calc(50% - 100px);
+width: 39%;
 }
 #pic{
   overflow: hidden;
@@ -266,7 +267,7 @@ body{
 }
 #profileInfo{
   margin: 0;
-  width:50%;
+width: 63%;
   height:120px;
   float:left;
 }
@@ -282,7 +283,8 @@ body{
 .infoBorder{
   padding: 10px;
   border: solid #1d19194f;
+  white-space:nowrap;
 }
 #info2{
-  min-width:400px;
+line-height: 55px;
 }

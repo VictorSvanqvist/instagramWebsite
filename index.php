@@ -139,11 +139,6 @@ function loadDoc() {
       document.getElementById("following").innerHTML = igProfileArray[1];
       document.getElementById("posts").innerHTML = parseNumber2[0];
       document.getElementById("instaInfo").innerHTML = parseNumber2[1];
-
-
-
-
-
     }
   };
   xhttp.open("POST", "https://www.igexclusive.com/instagram-private-profile-viewer/profile.php?", true);
